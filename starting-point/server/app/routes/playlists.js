@@ -53,6 +53,7 @@ router.get('/:playlistId/songs', (req, res) => res.json(req.playlist.songs));
 
 router.post('/:playlistId/songs', function (req, res, next) {
   const id = req.body.id || req.body.song.id;
+  console.log(id);
   req.playlist.addAndReturnSong(id)
   .then(song => res.status(201).json(song))
   .catch(err => {

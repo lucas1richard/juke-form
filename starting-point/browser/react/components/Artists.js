@@ -21,6 +21,6 @@ const Artists = (props) => {
       </div>
     </div>
   );
-}
+};
 
 export default Artists;
